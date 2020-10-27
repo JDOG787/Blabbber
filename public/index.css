@@ -1,0 +1,93 @@
+* {
+  font-family: Montserrat;
+}
+
+body {
+  background-color: #0F1724;
+  margin: 0;
+}
+
+nav {
+  padding: 10px;
+  background-color: #1D2636;
+}
+
+.brand {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 460px auto;
+  padding: 20px;
+  grid-gap: 20px;
+}
+
+.post {
+  background-color: #1D2636;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+.shout-outs {
+  font-size: 36px;
+}
+
+.post-author {
+  display: inline;
+}
+
+.post-text {
+  font-size: 18px;
+}
+
+.post-img {
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.post-img-container {
+  text-align: center;
+}
+
+.date {
+  margin-top: 10px;
+  color: rgb(206, 206, 206);
+}
+
+.sidebar {
+  padding-top: 20px;
+  background: #1D2636;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.sidebar-links {
+  background: rgb(206, 206, 206);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  color: #0F1724;
+  border-radius: 8px;
+}
+
+.sidebar > a {
+  text-decoration: none;
+}
+
+.sidebar-filler {
+  background: red;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}

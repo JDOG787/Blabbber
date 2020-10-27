@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("part/head.html") %>
+</head>
+<body>
+  <%- include("part/nav.html") %>
+  <div class="container">
+    <div></div>
+    <div class="posts-container">
+      <% posts.forEach((post) => { %>
+        <div class="post">
+          <div class="post-header">
+            <span class="shout-outs">
+              12
+              <i class="fa fa-bullhorn" style="font-size:36px"></i>  
+            </span>
+            <div class="post-author">
+              JDOG787
+            </div>
+          </div>
+          <div class="post-content">
+            <h1 class="post-title"><%= post.title %></h1>
+            <p class="post-text"><%= post.body %></p>
+            <div class="post-img-container">
+              <img src="<%= post.image %>" class="post-img">
+            </div>
+            <div class="date"><%= post.date.toDateString() %></div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <div class="sidebar">
+      <a href="/">
+        <div class="sidebar-links">
+          Home
+        </div>
+      </a>
+      <a href="">
+        <div class="sidebar-links">
+          Search
+        </div>
+      </a>
+      <a href="/new">
+        <div class="sidebar-links">
+          Post
+        </div>
+      </a>
+      <a href="">
+        <div class="sidebar-links">
+          Profile
+        </div>
+      </a>
+      <a href="">
+        <div class="sidebar-links">
+          Notifications
+        </div>
+      </a>
+      <a href="/signup">
+        <div class="sidebar-links">
+          Sign up
+        </div>
+      </a>
+      <a href="/login">
+        <div class="sidebar-links">
+          Login
+        </div>
+      </a>
+      <a href="">
+        <div class="sidebar-links">
+          Logout
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
