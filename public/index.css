@@ -48,6 +48,7 @@ nav {
 
 .post-text {
   font-size: 18px;
+  word-break: break-all;
 }
 
 .post-img {
@@ -90,4 +91,56 @@ nav {
   background: red;
   grid-row: 2 / 3;
   grid-column: 3 / 4;
+}
+
+.user-info {
+  margin: 20px;
+  background-color: #1D2636;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.username {
+  text-align: center;
+}
+
+.profile-image-container {
+  text-align: center;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.follower-info {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.follower-info > span {
+  margin: 10px;
+}
+
+.profile-posts {
+  margin: 20px;
+  background-color: #1D2636;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+
+.profile-post > img {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.white {
+  color: white;
 }

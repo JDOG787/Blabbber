@@ -3,9 +3,15 @@ const passportLocalMongoose = require("passport-local-mongoose");
 
 const schema = new mongoose.Schema({
   username: String,
-  password: String
+  password: String,
+  posts: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+			ref: "Post"
+    }
+  ]
+  
   // later add:
-  // Posts
   // bio
   // followers
   // following

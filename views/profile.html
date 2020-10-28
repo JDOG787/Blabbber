@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("part/head.html") %>
+  <link rel="stylesheet" href="/new.css">
+</head>
+<body>
+  <%- include("part/nav.html") %>
+  <div class="user-info">
+    <div class="profile-image-container">
+      <img src="/logo.jpeg" class="profile-image">
+    </div>
+    <h1 class="username">@<%= user.username %></h1>
+    <div class="follower-info">
+      <span>Followers: 15</span>
+      <span>Following: 9</span>
+    </div>
+  </div> 
+  <h2 class="center white"><%= user.posts.length %> posts</h2>
+  <div class="profile-posts">
+    <% user.posts.forEach((post) => { %>
+      <div class="profile-post">
+        <img src="<%= post.image %>">
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 const express = require('express'),
       app = express(),
-      // bodyParser =require("body-parser"),
+      bodyParser = require("body-parser"),
       passport = require("passport"),
       localStrategy = require("passport-local"),
       User = require("./models/user");
@@ -9,7 +9,7 @@ require("./mongo")();
 app.use(express.static("public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // AUTH
 app.use(require("express-session")({
