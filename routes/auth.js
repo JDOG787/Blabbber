@@ -9,13 +9,18 @@ router.get('/signup', (req, res) => {
 });
 
 router.post("/signup", (req, res) => {
-  User.register(new User({username: req.body.username}), req.body.password, (err, user) => {
+  let newUser = {
+    username: req.body.username,
+    profileImage: "/imgs/user.png",
+    bio: ""
+  }
+  User.register(new User(newUser), req.body.password, (err, user) => {
     if(err) {
       console.log(err);
       return res.render("signup");
     }
     passport.authenticate("local")(req, res, () => {
-      res.redirect("/");
+      res.redirect("/home");
     });
   });
 });
@@ -25,7 +30,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  successRedirect: "/home",
   failureRedirect: "/login"
 }), (req, res) => {
 });

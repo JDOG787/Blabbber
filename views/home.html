@@ -31,11 +31,6 @@
       <% }) %>
     </div>
     <div class="sidebar">
-      <a href="/">
-        <div class="sidebar-links">
-          Home
-        </div>
-      </a>
       <a href="">
         <div class="sidebar-links">
           Search
@@ -46,7 +41,7 @@
           Post
         </div>
       </a>
-      <a href="">
+      <a href="/@<%= currentUser.username %>">
         <div class="sidebar-links">
           Profile
         </div>
@@ -56,18 +51,8 @@
           Notifications
         </div>
       </a>
-      <a href="/signup">
-        <div class="sidebar-links">
-          Sign up
-        </div>
-      </a>
-      <a href="/login">
-        <div class="sidebar-links">
-          Login
-        </div>
-      </a>
-      <a href="">
-        <div class="sidebar-links">
+      <a href="/logout">
+        <div class="sidebar-links logout">
           Logout
         </div>
       </a>

@@ -9,13 +9,13 @@ const schema = new mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
 			ref: "Post"
     }
-  ]
+  ],
+  profileImage: String,
+  bio: String
   
   // later add:
-  // bio
   // followers
   // following
-  // profile picture
 });
 
 schema.plugin(passportLocalMongoose);

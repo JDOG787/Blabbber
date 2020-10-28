@@ -3,13 +3,15 @@ const express = require('express'),
       bodyParser = require("body-parser"),
       passport = require("passport"),
       localStrategy = require("passport-local"),
-      User = require("./models/user");
+      User = require("./models/user"),
+      methodOverride = require("method-override");
 
 require("./mongo")();
 app.use(express.static("public"));
 app.engine("html", require("ejs").renderFile);
 app.set("view engine", "html");
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 
 // AUTH
 app.use(require("express-session")({

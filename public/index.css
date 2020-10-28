@@ -24,7 +24,7 @@ nav {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 460px auto;
+  grid-template-rows: 360px auto;
   padding: 20px;
   grid-gap: 20px;
 }
@@ -111,6 +111,7 @@ nav {
 
 .profile-image {
   border-radius: 50%;
+  width: 200px;
 }
 
 .follower-info {
@@ -143,4 +144,22 @@ nav {
 
 .white {
   color: white;
+}
+
+.logout {
+  margin-top: 40px;
+}
+
+.edit-profile-btn-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-profile-btn {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  background-color: rgb(206, 206, 206);
+  border: none;
+  border-radius: 8px;
 }

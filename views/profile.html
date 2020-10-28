@@ -8,13 +8,19 @@
   <%- include("part/nav.html") %>
   <div class="user-info">
     <div class="profile-image-container">
-      <img src="/logo.jpeg" class="profile-image">
+      <img src="<%= user.profileImage %>" class="profile-image">
     </div>
     <h1 class="username">@<%= user.username %></h1>
+    <% if(isOwner) { %>
+      <div class="edit-profile-btn-container">
+        <a href="/profile/edit" class="edit-profile-btn">Edit Profile</a>
+      </div>
+    <% } %>
     <div class="follower-info">
       <span>Followers: 15</span>
       <span>Following: 9</span>
     </div>
+    <p class="center white"><%= user.bio %></p>
   </div> 
   <h2 class="center white"><%= user.posts.length %> posts</h2>
   <div class="profile-posts">
