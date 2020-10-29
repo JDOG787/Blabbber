@@ -42,8 +42,8 @@ nav {
   font-size: 36px;
 }
 
-.post-author {
-  display: inline;
+.post-author-container {
+  float: right; 
 }
 
 .post-text {
@@ -162,4 +162,14 @@ nav {
   background-color: rgb(206, 206, 206);
   border: none;
   border-radius: 8px;
+}
+
+.post-author { 
+  display: inline;
+  padding: 10px;
+}
+
+.mini-profile-image {
+  width: 35px;
+  border-radius: 50%;
 }

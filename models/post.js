@@ -7,6 +7,13 @@ const schema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  author: {
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    },
+    username: String
   }
 });
 

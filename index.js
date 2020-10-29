@@ -26,7 +26,9 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // ROUTES
-app.use(require("./routes/site"));
+app.use(require("./routes"));
+app.use(require("./routes/post"));
 app.use(require("./routes/auth"));
+app.use(require("./routes/user"));
 
 app.listen(8080);
